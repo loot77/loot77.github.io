@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главное меню</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Adding Font Awesome for icons-->
+  <title>Про мод</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,7 +21,6 @@
       overflow: hidden;
     }
 
-    /* Animated background*/
     .animated-background {
       position: absolute;
       width: 150%;
@@ -33,7 +32,7 @@
       background: linear-gradient(225deg, #8E2DE2 0%, #4A00E0 50%, #8E2DE2 100%);  
       animation: movingBg 15s infinite linear;
     }
-        
+
     @keyframes movingBg {
       from {
         transform: rotate(0deg) translateY(-50px) rotate(0deg);
@@ -43,7 +42,6 @@
       }
     }
 
-    /* Content area */
     .content {
       position: relative;
       z-index: 1;
@@ -73,7 +71,6 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.3s;
-      margin: 10px;
       font-size: 16px;
       display: flex;
       align-items: center;
@@ -83,11 +80,21 @@
     button:hover {
       background-color: #ededed;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
     }
 
     button:active {
-      transform: translateY(2px);
+      transform: translateY(0);
       box-shadow: none;
+    }
+
+    i {
+      color: #8E2DE2;
+      transition: color 0.3s;
+    }
+
+    button:hover i {
+      color: #4A00E0;
     }
 
     .button-container {
@@ -95,28 +102,6 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 32px;
-        margin-bottom: 8px;
-      }
-
-      h2 {
-        font-size: 16px;
-        margin-bottom: 24px;
-      }
-      
-      button {
-        font-size: 14px;
-        padding: 8px 16px;
-      }
     }
   </style>
   <script>
@@ -131,18 +116,10 @@
 <body>
   <div class="animated-background"></div>
   <div class="content">
-    <h1>Добро пожаловать!</h1>
-    <h2>Выберите одну из следующих опций:</h2>
+    <h1>Про мод</h1>
+    <h2>Ку это тест</h2>
     <div class="button-container">
-      <a href="https://t.me/amongPC" target="_blank">
-        <button><i class="fas fa-comments"></i> Телеграм группа</button>
-      </a>
-      <a href="https://t.me/ModAmongbot" target="_blank">
-        <button><i class="fas fa-robot"></i> Телеграм бот</button>
-      </a>
-      <a href="about_mod.html">
-        <button><i class="fas fa-info-circle"></i> Про мод</button>
-      </a>
+      <button onclick="download('TOHE.dll', 'TOHE.dll')"><i class="fas fa-download"></i> Скачать TOHE.DLL</button>
     </div>
   </div>
 </body>
