@@ -1,2 +1,9 @@
 
-/TEST1/sus.html
+/.vs
+/bin
+/obj
+/.editorconfig
+/.TEST1
+
+FodyWeavers.xsd
+TOHE.sln
