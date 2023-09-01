@@ -103,6 +103,31 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+
+    /* Новые стили для ракеты */
+    .rocket {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      animation: rocketMovement 8s infinite;
+    }
+
+    @keyframes rocketMovement {
+      0% {
+        bottom: -100px;
+        transform: translateX(-50%);
+      }
+      50% {
+        bottom: 80%;
+        transform: translateX(-50%);
+      }
+      100% {
+        bottom: -100px;
+        transform: translateX(-50%);
+      }
+    }
   </style>
   <script>
     function download(url, filename) {
@@ -119,8 +144,12 @@
     <h1>TOH-RE Manager</h1>
     <h2>TOH-RE MANAGER 1.1.0 beta 7</h2>
     <div class="button-container">
-      <button onclick="download('TOHE.dll', 'TOHE.dll')"><i class="fas fa-download"></i> Скачать TOHE.DLL</button>
+      <button onclick="download('TOHE.dll', 'TOHE.dll')"><i class="fas fa-download"></i> Скачать</button>
     </div>
+  </div>
+  <!-- Добавить ракету с иконкой font-awesome -->
+  <div class="rocket">
+    <i class="fas fa-rocket"></i>
   </div>
 </body>
 </html>
