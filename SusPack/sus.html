@@ -84,6 +84,13 @@
             link.download = filename;
             link.click();
         }
+        function launchAmongUs() {
+    if (/(android)/i.test(navigator.userAgent)) {
+        window.location.href = 'market://details?id=com.innersloth.spacemafia'; 
+    } else {
+        window.location.href = "steam://run/945360"; 
+    }
+}
     </script>
 </head>
 <body>
@@ -94,6 +101,7 @@
         <span class="small-text">0.2.1_0.0.5 FisFis</span>
         <button onclick="download('TOHE3.0.0C6.dll', 'TOHE3.0.0C6.dll')"><i class="fas fa-download"></i> Скачать TOH-RE Manager</button>
         <span class="small-text">1.1.0 beta 9</span>
+        <button id="launch-among-us" onclick="launchAmongUs()"><i class="fas fa-play"></i> Запустить Among Us</button>
     </div>
 </body>
 </html>
